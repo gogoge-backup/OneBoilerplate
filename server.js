@@ -64,7 +64,7 @@ app.get('/', renderIndex, logMiddleware )
 const server = app.listen(3000, () => {
 		const host = server.address().address
 		const port = server.address().port
-
+		console.log('NODE_ENV = '+process.env.NODE_ENV)
 		console.log('[HTTP Listening] http://%s:%s', host, port)
 	}
 )

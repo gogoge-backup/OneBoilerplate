@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
-import Main from 'components/Main'
 // import style from '../css/style.sass'
 //stateless component
 const Root = () => {
@@ -12,17 +11,21 @@ const Root = () => {
 // }
 
 //state component
-export default class Index extends Component{
+export default class Hello extends Component{
 	constructor(props){
 		super(props)
+		this.state = { click: false }
 	}
+	click = () => {
+		this.setState({click:true})
+	};
 	render () {
 		return (
 			<div>
-				<Main />
+				<h1 onClick={this.click}>Webpack [81] React</h1>
+				<div>{this.state.click.toString()}</div>
+				<div>This is root component</div>
 			</div>
 		)
 	}
 }
-const reactRootDom = document.getElementById('react-root')
-render(<Index />, reactRootDom)

@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const config = {
+	devTool : "eval",
 	entry: [
 		// HMR
 		'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
@@ -17,10 +18,7 @@ const config = {
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				loader: 'babel', // 'babel-loader' is also a legal name to reference
-				query: { 
-					presets: ['es2015','react'] 
-				}
+				loader: 'babel' // 'babel-loader' is also a legal name to reference
 			}
 			// {
 			// 				test: /\.css$/,
@@ -36,6 +34,12 @@ const config = {
 		]
 	},
 	resolve: {
+		root: path.resolve(__dirname),
+		alias: {
+			redboxConfig: 'redbox.config.js',
+			components: 'src/app/components',
+			index: 'src/app/index.js'
+		},
 		// when import the modules which extension is one of below, we can skip the ext filename
 		extensions: ['', '.js', '.json', '.jsx'] 
 	},
