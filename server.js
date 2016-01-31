@@ -10,6 +10,8 @@ const webpack = require('webpack')
 const express = require('express')
 const app = express()
 
+const fs = require('fs')
+const http2 = require('spdy')
 // console color
 const chalk = require('chalk')
 
@@ -68,3 +70,15 @@ const server = app.listen(3000, () => {
 		console.log('[HTTP Listening] http://%s:%s', host, port)
 	}
 )
+
+// // RESERVE CODE FOR SPYD/HTTP2
+// var options = {
+//   key: fs.readFileSync('./localhost.key'),
+//   cert: fs.readFileSync('./localhost.crt')
+// }
+// const server = http2.createServer(options, app).listen(3000, () => {
+// 		const host = server.address().address
+// 		const port = server.address().port
+// 		console.log('NODE_ENV = '+process.env.NODE_ENV)
+// 		console.log('[HTTP Listening] http://%s:%s', host, port)
+// })
