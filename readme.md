@@ -1,8 +1,8 @@
 # Just another boilerplate for frontned dev
 ---
 
-[![Build Status](https://travis-ci.org/gogogeNinja/OneBoilerplate.svg?branch=master)](https://travis-ci.org/gogogeNinja/OneBoilerplate.svg?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/gogogeNinja/OneBoilerplate/badge.svg?branch=master)](https://coveralls.io/github/gogogeNinja/OneBoilerplate?branch=master)
+[![Build Status](https://travis-ci.org/gogoge/OneBoilerplate.svg?branch=master)](https://travis-ci.org/gogoge/OneBoilerplate.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/gogoge/OneBoilerplate/badge.svg?branch=master)](https://coveralls.io/github/gogoge/OneBoilerplate?branch=master)
 
 
 
